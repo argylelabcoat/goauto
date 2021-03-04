@@ -305,6 +305,7 @@ func (t *myCatTask)Run(i *goauto.TaskInfo) (err error) {
 * [Grunt](http://gruntjs.com/) Node.js
 
 ## License
-Copyright 2021 Matthew Hughes. All rights reserved.
-Copyright 2015 Davin Hills. All rights reserved.
-MIT license. License details can be found in the LICENSE file.
+
+* Copyright 2021 Matthew Hughes. All rights reserved.
+* Copyright 2015 Davin Hills. All rights reserved.
+* MIT license. License details can be found in the LICENSE file.
