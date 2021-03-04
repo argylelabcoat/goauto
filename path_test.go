@@ -16,7 +16,7 @@ func TestGoPaths(t *testing.T) {
 }
 
 func TestAbsPath(t *testing.T) {
-	tp := filepath.Join("src", "github.com", "dshills", "goauto")
+	tp := filepath.Join("src", "github.com", "argylelabcoat", "goauto")
 	ap, err := AbsPath(tp)
 	if err != nil {
 		t.Errorf("AbsPath error: %v\n", err)
@@ -25,7 +25,7 @@ func TestAbsPath(t *testing.T) {
 		t.Errorf("AbsPath: %v should not equal %v\n", ap, tp)
 	}
 
-	expect := "/Users/dshills/Development/Go/src/github.com/dshills/goauto"
+	expect := "/Users/argylelabcoat/Development/Go/src/github.com/argylelabcoat/goauto"
 	if ap != expect {
 		t.Errorf("Expected %v Got %v\n", expect, ap)
 	}

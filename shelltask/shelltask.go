@@ -12,7 +12,7 @@ import (
 	"os/exec"
 	"time"
 
-	"github.com/dshills/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 type shellTask struct {

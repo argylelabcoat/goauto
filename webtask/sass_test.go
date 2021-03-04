@@ -9,11 +9,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/dshills/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 func TestSass(t *testing.T) {
-	tp := filepath.Join("src", "github.com", "dshills", "goauto", "testing", "_sub.scss")
+	tp := filepath.Join("src", "github.com", "argylelabcoat", "goauto", "testing", "_sub.scss")
 	p, err := goauto.AbsPath(tp)
 	if err != nil {
 		t.Error(err)
