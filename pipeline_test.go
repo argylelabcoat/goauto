@@ -16,7 +16,7 @@ func TestPipeline(t *testing.T) {
 
 func TestPipelineRec(t *testing.T) {
 	p := NewPipeline("Test Pipeline", Silent)
-	tp := filepath.Join("src", "github.com", "dshills", "goauto")
+	tp := filepath.Join("src", "github.com", "argylelabcoat", "goauto")
 	err := p.WatchRecursive(tp, IgnoreHidden)
 	if err != nil {
 		t.Errorf("WatchRecursive failed %v\n", err)
@@ -32,7 +32,7 @@ func TestPipelineRec(t *testing.T) {
 /* Not a reliable test. Depends on speed of the fsnotify events
 func TestPipelineConcurrency(t *testing.T) {
 	p := NewPipeline("Test Pipeline", Verbose)
-	tp := filepath.Join("src", "github.com", "dshills", "goauto", "testing")
+	tp := filepath.Join("src", "github.com", "argylelabcoat", "goauto", "testing")
 	err := p.WatchRecursive(tp, IgnoreHidden)
 	if err != nil {
 		t.Errorf("WatchRecursive failed %v\n", err)

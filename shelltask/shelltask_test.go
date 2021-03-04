@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/dshills/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 func TestShellTask(t *testing.T) {
@@ -37,7 +37,7 @@ func TestShellTask(t *testing.T) {
 }
 
 func TestOSTasks(t *testing.T) {
-	tp := filepath.Join("src", "github.com", "dshills", "goauto", "testing")
+	tp := filepath.Join("src", "github.com", "argylelabcoat", "goauto", "testing")
 	path, err := goauto.AbsPath(tp)
 	if err != nil {
 		t.Error(err)

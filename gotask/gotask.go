@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/dshills/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 type goPrjTask struct {

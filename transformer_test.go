@@ -15,22 +15,22 @@ func TestTransforms(t *testing.T) {
 	}
 
 	/* Only works local, obviously
-	i = "/Users/dshills/Development/Go/src/github.com/dshills/goauto/transform.go"
+	i = "/Users/argylelabcoat/Development/Go/src/github.com/argylelabcoat/goauto/transform.go"
 
-	e = "src/github.com/dshills/goauto/transform.go"
+	e = "src/github.com/argylelabcoat/goauto/transform.go"
 	o = GoRelBase(i)
 	if o != e {
 		t.Errorf("Expected %v got %v", e, o)
 	}
 
 	o = GoRelDir(i)
-	e = "src/github.com/dshills/goauto"
+	e = "src/github.com/argylelabcoat/goauto"
 	if o != e {
 		t.Errorf("Expected %v got %v", e, o)
 	}
 
 	o = GoRelSrcDir(i)
-	e = "github.com/dshills/goauto"
+	e = "github.com/argylelabcoat/goauto"
 	if o != e {
 		t.Errorf("Expected %v got %v", e, o)
 	}
