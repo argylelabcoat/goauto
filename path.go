@@ -53,8 +53,5 @@ func GoPaths() []string {
 
 // IsHidden is a HACKY check for hidden directory name
 func IsHidden(d string) bool {
-	if d[:1] == "." {
-		return true
-	}
-	return false
+	return d[:1] == "."
 }

@@ -79,9 +79,7 @@ func (wf *Workflow) Match(fpath string, op Op) bool {
 
 // Add adds a task to the workflow
 func (wf *Workflow) Add(tasks ...Tasker) {
-	for _, t := range tasks {
-		wf.Tasks = append(wf.Tasks, t)
-	}
+	wf.Tasks = append(wf.Tasks, tasks...)
 }
 
 func (wf *Workflow) runner(info *TaskInfo) {

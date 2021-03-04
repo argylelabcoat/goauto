@@ -101,17 +101,18 @@ func (p *Pipeline) WatchRecursive(watchDir string, ignoreHidden bool) error {
 				return filepath.SkipDir
 			}
 			_, err = p.Watch(path)
+			if nil != err {
+				return err
+			}
 		}
 		return nil
 	})
-	return nil
+	return err
 }
 
 // Add adds one or more Workflows to the pipeline
 func (p *Pipeline) Add(ws ...Workflower) {
-	for _, w := range ws {
-		p.Workflows = append(p.Workflows, w)
-	}
+	p.Workflows = append(p.Workflows, ws...)
 }
 
 // Start begins watching for changes to files in the Watches directories
@@ -170,16 +171,13 @@ func (p *Pipeline) distributeEvents(cs ...chan<- *Event) {
 		}
 	}()
 
-	for {
-		select {
-		case d := <-p.events:
-			if d == nil || len(d) < 1 {
-				return
-			}
-			for _, e := range d {
-				for _, c := range cs {
-					c <- e
-				}
+	for d := range p.events {
+		if d == nil || len(d) < 1 {
+			return
+		}
+		for _, e := range d {
+			for _, c := range cs {
+				c <- e
 			}
 		}
 	}
@@ -191,16 +189,13 @@ func (p *Pipeline) queryWorkflow() chan<- *Event {
 	in := make(chan *Event)
 
 	go func() {
-		for {
-			select {
-			case e := <-in:
-				if e == nil {
-					return
-				}
-				for _, wf := range p.Workflows {
-					if wf.Match(e.Path, e.Op) {
-						wf.Run(&TaskInfo{Src: e.Path, Tout: p.Wout, Terr: p.Werr, Verbose: p.Verbose})
-					}
+		for e := range in {
+			if e == nil {
+				return
+			}
+			for _, wf := range p.Workflows {
+				if wf.Match(e.Path, e.Op) {
+					wf.Run(&TaskInfo{Src: e.Path, Tout: p.Wout, Terr: p.Werr, Verbose: p.Verbose})
 				}
 			}
 		}
@@ -237,14 +232,11 @@ func (p *Pipeline) queryRecDir() chan<- *Event {
 	in := make(chan *Event, 10) // bursts of events often come in, try not to slow the workflows down
 
 	go func() {
-		for {
-			select {
-			case e := <-in:
-				if e == nil {
-					return
-				}
-				p.matchNewRec(*e)
+		for e := range in {
+			if e == nil {
+				return
 			}
+			p.matchNewRec(*e)
 		}
 	}()
 	return in
