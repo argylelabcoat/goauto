@@ -1,0 +1,4 @@
+golang.org/x/sys v0.0.0-20210304152209-afaa3650a925 h1:Ee/Y8w57dY5pI4wYh0ZdFQn++NMCNRNIOKXCZ/82iUM=
+golang.org/x/sys v0.0.0-20210304152209-afaa3650a925/go.mod h1:h1NjWce9XRLGQEsW7wpKNCjG9DtNlClVuFLEZdDNbEs=
+gopkg.in/fsnotify.v1 v1.4.7 h1:xOHLXZwVvI9hhs+cLKq5+I5onOuwQLhQwiu63xxlHs4=
+gopkg.in/fsnotify.v1 v1.4.7/go.mod h1:Tz8NjZHkW78fSQdbUxIjBTcgA1z1m8ZHf0WmKUhAMys=
