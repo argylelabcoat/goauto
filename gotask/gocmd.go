@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"argylelabcoat/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 type goPrjTask struct {

@@ -1,4 +1,4 @@
-module argylelabcoat/goauto
+module github.com/argylelabcoat/goauto
 
 go 1.16
 

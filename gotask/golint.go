@@ -12,7 +12,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"argylelabcoat/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 type goLintTask struct {

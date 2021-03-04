@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"argylelabcoat/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 func TestShellTask(t *testing.T) {

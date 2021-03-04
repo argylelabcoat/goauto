@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"argylelabcoat/goauto"
+	"github.com/argylelabcoat/goauto"
 )
 
 type sassTask struct {
