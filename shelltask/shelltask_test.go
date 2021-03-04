@@ -48,7 +48,10 @@ func TestOSTasks(t *testing.T) {
 		t.Fatal(err)
 	}
 	defer f.Close()
-	f.WriteString("TESTING")
+	_, err = f.WriteString("TESTING")
+	if err != nil {
+		t.Fatal(err)
+	}
 	_, err = os.Stat(fname)
 	if err != nil {
 		t.Fatal(err)

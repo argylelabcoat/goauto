@@ -5,6 +5,7 @@ package webtask
 
 import (
 	"fmt"
+	"log"
 	"os/exec"
 	"path/filepath"
 	"time"
@@ -46,7 +47,11 @@ func (st sassTask) Run(info *goauto.TaskInfo) (err error) {
 	cmd.Stderr = info.Terr
 
 	defer func() {
-		info.Tout.Write(info.Buf.Bytes())
+		_, err = info.Tout.Write(info.Buf.Bytes())
+
+		if err != nil {
+			log.Fatal(err)
+		}
 		if err != nil && info.Verbose {
 			t1 := time.Now()
 			fmt.Fprintf(info.Tout, "<< sass %v %v\n", dir, t1.Sub(t0))

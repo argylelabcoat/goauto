@@ -59,7 +59,8 @@ func (w *watchFS) Start(latency time.Duration, paths []string) (<-chan ESlice, e
 func (w *watchFS) bufferEvents(send chan<- ESlice, l time.Duration) {
 	defer close(send)
 
-	tick := time.Tick(l)
+	ticker := time.NewTicker(l)
+	tick := ticker.C
 	buf := make(ESlice, 0, 10)
 	var out chan<- ESlice
 
