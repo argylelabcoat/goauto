@@ -1,7 +1,10 @@
-# GoAuto [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/dshills/goauto)
+# GoAuto [![GoDoc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](https://godoc.org/github.com/argylelabcoat/goauto)
 >"What makes you so ashamed of being a grownup?" - The War Doctor
 
 ## Overview
+
+* Originally Forked from: https://github.com/dshills/goauto *
+
 Task automation for grownups. GoAuto is a package that makes building a native executable tailored to a specific work flow, simple. 
 
 Here is a complete example of a Go build and test process triggered by any source file in a project changing. 
@@ -14,8 +17,8 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/dshills/goauto"
-	"github.com/dshills/goauto/gotask"
+	"github.com/argylelabcoat/goauto"
+	"github.com/argylelabcoat/goauto/gotask"
 )
 
 func main() {
@@ -63,7 +66,7 @@ Building a general purpose build tool with GoAuto that used config files would b
 
 
 ## Installation
-	go get github.com/dshills/goauto
+	go get github.com/argylelabcoat/goauto
 	
 ## Concepts
 
