@@ -10,7 +10,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/go-fsnotify/fsevents"
+	"github.com/fsnotify/fsevents"
 )
 
 type watchOSX struct {

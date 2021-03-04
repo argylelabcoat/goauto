@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/argylelabcoat/goauto"
+	"argylelabcoat/goauto"
 )
 
 func TestSass(t *testing.T) {

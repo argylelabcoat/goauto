@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/argylelabcoat/goauto"
+	"argylelabcoat/goauto"
 )
 
 // A RestartTask represents a task to launch or relaunch an executable file

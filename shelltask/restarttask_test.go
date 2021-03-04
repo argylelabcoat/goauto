@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/argylelabcoat/goauto"
+	"argylelabcoat/goauto"
 )
 
 func TestRestartBlocking(t *testing.T) {
