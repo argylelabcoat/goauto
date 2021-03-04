@@ -301,10 +301,10 @@ func (t *myCatTask)Run(i *goauto.TaskInfo) (err error) {
 
 ## Alternatives
 
-* [Slurp](https://github.com/omeid/slurp) Go
 * [Gulp](http://gulpjs.com/) Node.js
 * [Grunt](http://gruntjs.com/) Node.js
 
 ## License
+Copyright 2021 Matthew Hughes. All rights reserved.
 Copyright 2015 Davin Hills. All rights reserved.
 MIT license. License details can be found in the LICENSE file.
